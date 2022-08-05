@@ -1,0 +1,10 @@
+{
+  "name": "@mcorange9/mclog",
+  "version": "1.0.0",
+  "description": "A cool logging library for all of your logging needs.",
+  "main": "src/index.js",
+  "repository": "https://github.com/MCorange99/mcLog",
+  "author": "MCorange",
+  "license": "GNU-3",
+  "private": false
+}
