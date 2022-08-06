@@ -40,6 +40,8 @@ module.exports = class mcLog{
         this.error_text_color = error_text_color
         this.critical_text_color = critical_text_color
         this._init_log_files()
+        this.color = Color.color
+        this.colors = Color.colors
     }
 
     /**
