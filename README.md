@@ -81,22 +81,22 @@ Those weird `&2` things are color codes.
 |      &bl      |     Blink           |
 |      &rv      |     Reversed        |
 |      &hd      |     Hidden          |
-|      &0       |     FgBlack         |
-|      &1       |     FgRed           |
-|      &2       |     FgGreen         |
-|      &3       |     FgCyan          |
-|      &4       |     FgBlue          |
-|      &5       |     FgMagenta       |
-|      &6       |     FgYellow        |
-|      &7       |     FgWhite         |
-|      &b0      |     BgBlack         |
-|      &b1      |     BgRed           |
-|      &b2      |     BgGreen         |
-|      &b3      |     BgCyan          |
-|      &b4      |     BgRed           |
-|      &b5      |     BgMagenta       |
-|      &b6      |     BgYellow        |
-|      &b7      |     BgWhite         |
+|      &0       |     Fg Black         |
+|      &1       |     Fg Red           |
+|      &2       |     Fg Green         |
+|      &3       |     Fg Cyan          |
+|      &4       |     Fg Blue          |
+|      &5       |     Fg Magenta       |
+|      &6       |     Fg Yellow        |
+|      &7       |     Fg White         |
+|      &b0      |     Bg Black         |
+|      &b1      |     Bg Red           |
+|      &b2      |     Bg Green         |
+|      &b3      |     Bg Cyan          |
+|      &b4      |     Bg Red           |
+|      &b5      |     Bg Magenta       |
+|      &b6      |     Bg Yellow        |
+|      &b7      |     Bg White         |
 
 ## Author
 
