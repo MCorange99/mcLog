@@ -1,6 +1,6 @@
 {
   "name": "@mcorange9/mclog",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A cool logging library for all of your logging needs.",
   "types": "src/index.d.ts",
   "main": "src/index.js",
