@@ -150,9 +150,9 @@ module.exports = class mcLog{
         if (this.debug_mode){
             this._log_to_file(this.replace_placeholders(this.debug_text, file, pos, text), "debug")
             if (this.enable_colored_logging){
-                console.log(Color.color(this.replace_placeholders(this.debug_text_color, file, pos, text) + "\n"))
+                console.log(Color.color(this.replace_placeholders(this.debug_text_color, file, pos, text)))
             } else {
-                console.log(this.replace_placeholders(this.debug_text, file, pos, text) + "\n")  
+                console.log(this.replace_placeholders(this.debug_text, file, pos, text))  
             }
         }
     }
@@ -162,9 +162,9 @@ module.exports = class mcLog{
         this._log_to_file(this.replace_placeholders(this.info_text, file, pos, text), "full")
         this._log_to_file(this.replace_placeholders(this.info_text, file, pos, text), "info")
         if (this.enable_colored_logging){
-            console.log(Color.color(this.replace_placeholders(this.info_text_color, file, pos, text) + "\n"))
+            console.log(Color.color(this.replace_placeholders(this.info_text_color, file, pos, text)))
         } else {
-            console.log(this.replace_placeholders(this.info_text, file, pos, text) + "\n")
+            console.log(this.replace_placeholders(this.info_text, file, pos, text))
         }
     }
 
@@ -172,9 +172,9 @@ module.exports = class mcLog{
         this._log_to_file(this.replace_placeholders(this.warn_text, file, pos, text), "debug")
         this._log_to_file(this.replace_placeholders(this.warn_text, file, pos, text), "full")
         if (this.enable_colored_logging){
-            console.log(Color.color(this.replace_placeholders(this.warn_text_color, file, pos, text) + "\n"))
+            console.log(Color.color(this.replace_placeholders(this.warn_text_color, file, pos, text)))
         } else {
-            console.log(this.replace_placeholders(this.warn_text, file, pos, text) + "\n")
+            console.log(this.replace_placeholders(this.warn_text, file, pos, text))
         }
         // console.log(this.warn_text)
     }
@@ -183,9 +183,9 @@ module.exports = class mcLog{
         this._log_to_file(this.replace_placeholders(this.error_text, file, pos, text), "debug")
         this._log_to_file(this.replace_placeholders(this.error_text, file, pos, text), "full")
         if (this.enable_colored_logging){
-            console.log(Color.color(this.replace_placeholders(this.error_text_color, file, pos, text) + "\n"))
+            console.log(Color.color(this.replace_placeholders(this.error_text_color, file, pos, text)))
         } else {
-            console.log(this.replace_placeholders(this.error_text, file, pos, text) + "\n")
+            console.log(this.replace_placeholders(this.error_text, file, pos, text))
         }
     }
 
@@ -193,10 +193,10 @@ module.exports = class mcLog{
         this._log_to_file(this.replace_placeholders(this.critical_text, file, pos, text), "debug")
         this._log_to_file(this.replace_placeholders(this.critical_text, file, pos, text), "full")
         if (this.enable_colored_logging){
-            console.log(Color.color(this.replace_placeholders(this.critical_text_color, file, pos, text) + "\n"))
+            console.log(Color.color(this.replace_placeholders(this.critical_text_color, file, pos, text)))
 
         } else {
-            console.log(this.replace_placeholders(this.critical_text, file, pos, text) + "\n")
+            console.log(this.replace_placeholders(this.critical_text, file, pos, text))
         }
     }
 }
