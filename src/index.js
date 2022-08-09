@@ -4,41 +4,41 @@ const fs = require("fs")
 
 
 module.exports = class mcLog{
-    constructor(
-                debug_mode=                  false,
-                enable_file_logging=         true,
-                enable_colored_logging=      true,
-                full_log_file_path=          "./logs/{DATE-LESS}-full.log",
-                info_log_file_path=          "./logs/{DATE-LESS}-info.log",
-                debug_log_file_path=         "./logs/{DATE-LESS}-debug.log",
-                debug_text=                  "[{FILE}][{POS}][debug]: {TEXT}",
-                info_text=                   "[{FILE}][{POS}][info]: {TEXT}",
-                warn_text=                   "[{FILE}][{POS}][warn]: {TEXT}",
-                error_text=                  "[{FILE}][{POS}][error]: {TEXT}",
-                critical_text=               "[{FILE}][{POS}][critical]: {TEXT}",
-                debug_text_color=            "&2[&5&u{FILE}&r&2][&5&u{POS}&r&2][&5debug&2]&r:&5 {TEXT}&r",
-                info_text_color=             "&2[&4&u{FILE}&r&2][&4&u{POS}&r&2][&4info&2]&r:&4 {TEXT}&r",
-                warn_text_color=             "&2[&6&u{FILE}&r&2][&6&u{POS}&r&2][&6warn&2]&r:&6 {TEXT}&r",
-                error_text_color=            "&2[&1&u{FILE}&r&2][&1&u{POS}&r&2][&1error&2]&r:&1 {TEXT}&r",
-                critical_text_color=         "&2[&1&u{FILE}&r&2][&1&u{POS}&r&2][&1critical&2]&r: &b1{TEXT}&r",
-                ){
-        this.debug_mode = debug_mode
-        this.enable_colored_logging = enable_colored_logging
-        this.enable_file_logging = enable_file_logging
-        this.full_log_file_path = full_log_file_path
-        this.info_log_file_path = info_log_file_path
-        this.debug_log_file_path = debug_log_file_path
+    constructor(options = {
+                debug_mode:                  false,
+                enable_file_logging:         true,
+                enable_colored_logging:      true,
+                full_log_file_path:          "./logs/{DATE-LESS}-full.log",
+                info_log_file_path:          "./logs/{DATE-LESS}-info.log",
+                debug_log_file_path:         "./logs/{DATE-LESS}-debug.log",
+                debug_text:                  "[{FILE}][{POS}][debug]: {TEXT}",
+                info_text:                   "[{FILE}][{POS}][info]: {TEXT}",
+                warn_text:                   "[{FILE}][{POS}][warn]: {TEXT}",
+                error_text:                  "[{FILE}][{POS}][error]: {TEXT}",
+                critical_text:               "[{FILE}][{POS}][critical]: {TEXT}",
+                debug_text_color:            "&2[&5&u{FILE}&r&2][&5&u{POS}&r&2][&5debug&2]&r:&5 {TEXT}&r",
+                info_text_color:             "&2[&4&u{FILE}&r&2][&4&u{POS}&r&2][&4info&2]&r:&4 {TEXT}&r",
+                warn_text_color:             "&2[&6&u{FILE}&r&2][&6&u{POS}&r&2][&6warn&2]&r:&6 {TEXT}&r",
+                error_text_color:            "&2[&1&u{FILE}&r&2][&1&u{POS}&r&2][&1error&2]&r:&1 {TEXT}&r",
+                critical_text_color:         "&2[&1&u{FILE}&r&2][&1&u{POS}&r&2][&1critical&2]&r: &b1{TEXT}&r",
+    }){
+        this.debug_mode = options.debug_mode
+        this.enable_colored_logging = options.enable_colored_logging
+        this.enable_file_logging = options.enable_file_logging
+        this.full_log_file_path = options.full_log_file_path
+        this.info_log_file_path = options.info_log_file_path
+        this.debug_log_file_path = options.debug_log_file_path
         this.log_dir = this.full_log_file_path.split("/").slice(0, -1).join("/")
-        this.debug_text = debug_text
-        this.info_text = info_text
-        this.warn_text = warn_text
-        this.error_text = error_text
-        this.critical_text = critical_text
-        this.debug_text_color = debug_text_color
-        this.info_text_color = info_text_color
-        this.warn_text_color = warn_text_color
-        this.error_text_color = error_text_color
-        this.critical_text_color = critical_text_color
+        this.debug_text = options.debug_text
+        this.info_text = options.info_text
+        this.warn_text = options.warn_text
+        this.error_text = options.error_text
+        this.critical_text = options.critical_text
+        this.debug_text_color = options.debug_text_color
+        this.info_text_color = options.info_text_color
+        this.warn_text_color = options.warn_text_color
+        this.error_text_color = options.error_text_color
+        this.critical_text_color = options.critical_text_color
         this._init_log_files()
         this.color = Color.color
         this.colors = Color.colors
