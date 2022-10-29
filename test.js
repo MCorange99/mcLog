@@ -1,4 +1,7 @@
-const Logger = require("@mcorange9/mclog")
+const Logger = require("./src/")
+
+let token = "afgrewdfd"
+let ping = 123
 const logger = new Logger(options={
                         debug_mode:                  false,
                         enable_file_logging:         true,
@@ -19,7 +22,7 @@ const logger = new Logger(options={
                     })
 
 logger.debug("This will only show if debug mode is enabled", __filename, "hack_nasa")
-logger.info(logger.format("User connected with id {}", user.id), __filename, "on_connect")
+logger.info(logger.format("User connected with id {}", "asd"), __filename, "on_connect")
 logger.warn(logger.format("Api latency is higher than expected ({}), maybe im being attacked?"), ping, __filename, "api_ping_tester")
 if (!token instanceof String){
     logger.error(logger.format("Expected token type String, but found {}", typeof token), __filename, "init")
